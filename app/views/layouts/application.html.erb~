@@ -9,7 +9,7 @@
   </head>
   <body>
 
-
+  	<%= gmaps4rails(@json) %>
     <%= yield %>
   </body>
 

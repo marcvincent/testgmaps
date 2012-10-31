@@ -8,9 +8,6 @@ class GaddsController < ApplicationController
     @gadds = Gadd.all
 	 @json = Gadd.all.to_gmaps4rails
 
-		#test, pour inclure la possibilité de se creer une geoad dans index, ca prend la variable:
-		@gadd = Gadd.new
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @gadds }

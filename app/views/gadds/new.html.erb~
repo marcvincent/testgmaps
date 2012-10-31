@@ -1,9 +1,8 @@
 <h1>New gadd</h1>
 
-<%= render 'form' %>
+<%#= render 'form' %>
 
 <%= link_to 'Back', gadds_path %>
 
 
-<%= gmaps4rails(@json) %>
 <%= render 'gmaps4rails_new' %>

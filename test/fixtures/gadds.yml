@@ -6,7 +6,7 @@
 #  name       :string(255)
 #  latitude   :float
 #  longitude  :float
-#  user_id    :integer
+#  gmaps      :boolean
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

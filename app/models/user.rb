@@ -11,6 +11,6 @@
 
 class User < ActiveRecord::Base
   attr_accessible :email, :name
-  has_many :gadds
+  #has_many :gadds
 
 end

@@ -1,6 +1,6 @@
 Testgmaps::Application.routes.draw do
 
-	root :to => "gadds#index"
+
 
   get "static_pages/home"
 
