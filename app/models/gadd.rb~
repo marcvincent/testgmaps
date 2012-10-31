@@ -9,6 +9,7 @@
 #  gmaps      :boolean
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  gmaps_zoom :float
 #
 
 	class Gadd < ActiveRecord::Base
@@ -32,9 +33,9 @@
 
     	def gmaps4rails_marker_picture
  {
-		  "picture" => "app/assets/images/gadds/default.jpg",          # string,  mandatory
-			"width" => "319" ,          # integer, mandatory
-			"height" => "400",          # integer, mandatory
+		  "picture" => "/images/gmap_marker.png",          # string,  mandatory
+			"width" => "20" ,          # integer, mandatory
+			"height" => "34",          # integer, mandatory
 
 				                   # See doc here: http://google-maps-utility-library-v3.googlecode.com/svn/trunk/richmarker/docs/reference.html
 		 }

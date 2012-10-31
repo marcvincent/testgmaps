@@ -2,6 +2,15 @@
 
 	<%= gmaps4rails(@json) %>
 <%= render 'gmaps4rails_new' %>
+
+
+<br />
+
+<%= render 'form' %>
+
+<%= link_to 'New Gadd', new_gadd_path %>
+
+
 <table>
   <tr>
     <th>Name</th>
@@ -24,7 +33,3 @@
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Gadd', new_gadd_path %>

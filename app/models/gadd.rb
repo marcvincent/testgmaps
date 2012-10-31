@@ -9,10 +9,11 @@
 #  gmaps      :boolean
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  gmaps_zoom :float
 #
 
 	class Gadd < ActiveRecord::Base
-	  attr_accessible :latitude, :longitude, :name, :user_id
+	  attr_accessible :latitude, :longitude, :name, :gmaps_zoom
 
 		#belongs_to :user
 

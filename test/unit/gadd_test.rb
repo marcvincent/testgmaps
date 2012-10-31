@@ -9,6 +9,7 @@
 #  gmaps      :boolean
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  gmaps_zoom :float
 #
 
 require 'test_helper'

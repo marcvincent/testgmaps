@@ -13,7 +13,7 @@
         function updateFormLocation(latLng) {
             $('#gadd_latitude').val(latLng.lat());
             $('#gadd_longitude').val(latLng.lng());
-            $('#location_attributes_gmaps_zoom').val(Gmaps.map.serviceObject.getZoom());
+            $('#gadd_gmaps_zoom').val(Gmaps.map.serviceObject.getZoom());
         }
         // Add a marker with an open infowindow
         function placeMarker(latLng) {

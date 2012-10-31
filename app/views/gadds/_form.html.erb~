@@ -24,10 +24,6 @@
     <%= f.text_field :longitude %>
   </div>
 
-	  <div class="field">
-    <%= f.label :gmaps %><br />
-    <%= f.text_field :gmaps %>
-  </div>
 
   <div class="actions">
     <%= f.submit %>

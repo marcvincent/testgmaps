@@ -48,7 +48,7 @@ class GaddsController < ApplicationController
   # POST /gadds.json
   def create
     @gadd = Gadd.new(params[:gadd])
-	@gadd.gmaps = true
+	 @gadd.gmaps = true
     respond_to do |format|
       if @gadd.save
         format.html { redirect_to @gadd, notice: 'Gadd was successfully created.' }

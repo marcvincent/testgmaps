@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Ruby on Rails Tutorial Sample App | <%= yield(:title) %></title>
-    <%= stylesheet_link_tag    "application", :media => "all" %>
-    <%= stylesheet_link_tag "gmaps4rails" %>
-    <%= javascript_include_tag "application" %>
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
+
+	<%= render 'layouts/head' %>
 
 
-    <%= yield %>
-  </body>
+	<body>
+
+		<%= render 'layouts/header' %>
+
+		<%= yield %>
+
+		<%= render 'layouts/footer' %>
+
+	</body>
 
 
-  <footer>
-		<%= yield :scripts %>
-  </footer>
+
 </html>
