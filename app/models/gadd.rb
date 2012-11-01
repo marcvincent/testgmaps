@@ -17,8 +17,11 @@
 
 		#belongs_to :user
 
-	  validates :name, :length => {:maximum => 140}
+	  validates :name, :length => {:maximum => 140},
+	  					uniqueness: { case_sensitive: false }
 
+		validates :latitude, presence: true
+		validates :longitude, presence: true
 
 	  acts_as_gmappable :latitude => 'lat', :longitude => 'lng'
 

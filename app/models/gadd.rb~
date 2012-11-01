@@ -18,7 +18,8 @@
 		#belongs_to :user
 
 	  validates :name, :length => {:maximum => 140}
-
+		validates :latitude, presence: true
+		validates :longitude, presence: true
 
 	  acts_as_gmappable :latitude => 'lat', :longitude => 'lng'
 
@@ -32,7 +33,7 @@
     	end
 
     	def gmaps4rails_marker_picture
- {
+ 		{
 		  "picture" => "/images/gmap_marker.png",          # string,  mandatory
 			"width" => "20" ,          # integer, mandatory
 			"height" => "34",          # integer, mandatory
