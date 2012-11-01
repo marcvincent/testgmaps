@@ -1,4 +1,11 @@
+
+<% provide(:title, 'views/gadds/index') %>
+
 <h1>Listing gadds</h1>
+
+
+
+
 
 	<%= gmaps4rails(@json) %>
 <%= render 'gmaps4rails_new' %>
@@ -17,6 +24,7 @@
     <th>Latitude</th>
     <th>Longitude</th>
     <th>User</th>
+    <th>Gmaps zoom</th>
     <th></th>
     <th></th>
     <th></th>
@@ -27,6 +35,7 @@
     <td><%= gadd.name %></td>
     <td><%= gadd.latitude %></td>
     <td><%= gadd.longitude %></td>
+     <td><%= gadd.gmaps_zoom %></td>
     <td><%= link_to 'Show', gadd %></td>
     <td><%= link_to 'Edit', edit_gadd_path(gadd) %></td>
     <td><%= link_to 'Destroy', gadd, method: :delete, data: { confirm: 'Are you sure?' } %></td>
