@@ -32,7 +32,7 @@
     	end
 
     	def gmaps4rails_marker_picture
- {
+ 		{
 		  "picture" => "/images/gmap_marker.png",          # string,  mandatory
 			"width" => "20" ,          # integer, mandatory
 			"height" => "34",          # integer, mandatory

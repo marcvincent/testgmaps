@@ -8,7 +8,7 @@ class GaddsController < ApplicationController
 
   def index
     @gadds = Gadd.search(params[:search])
-	 @json = Gadd.all.to_gmaps4rails
+	 @json = Gadd.search(params[:search]).to_gmaps4rails
 
 		#test, pour inclure la possibilité de se creer une geoad dans index, ca prend la variable:
 		@gadd = Gadd.new

@@ -13,7 +13,7 @@
         function updateFormLocation(latLng) {
             $('#gadd_latitude').val(latLng.lat());
             $('#gadd_longitude').val(latLng.lng());
-            $('#location_attributes_gmaps_zoom').val(Gmaps.map.serviceObject.getZoom());
+            $('#gadd_gmaps_zoom').val(Gmaps.map.serviceObject.getZoom());
         }
         // Add a marker with an open infowindow
         function placeMarker(latLng) {
@@ -24,8 +24,8 @@
             });
             markersArray.push(marker);
             // Set and open infowindow
-            var infowindow = new google.maps.InfoWindow({
-                content: '<div class="popup"><h2>Awesome!</h2><p>Drag me and adjust the zoom level.</p>'
+            //var infowindow = new google.maps.InfoWindow({
+            //    content: '<h1>Your Gead</h1>'
             });
             infowindow.open(Gmaps.map.serviceObject,marker);
             // Listen to drag & drop

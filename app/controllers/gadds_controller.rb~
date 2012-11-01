@@ -5,14 +5,10 @@ class GaddsController < ApplicationController
 
 
 
-def index
-  @projects = Project.search(params[:search])
-end
-
 
   def index
     @gadds = Gadd.search(params[:search])
-	 @json = Gadd.all.to_gmaps4rails
+	 @json = Gadd.search(params[:search]).to_gmaps4rails
 
 		#test, pour inclure la possibilité de se creer une geoad dans index, ca prend la variable:
 		@gadd = Gadd.new
@@ -57,7 +53,7 @@ end
 	 @gadd.gmaps = true
     respond_to do |format|
       if @gadd.save
-        format.html { redirect_to @gadd, notice: 'Gadd was successfully created.' }
+        format.html { redirect_to @gadds, notice: 'Gadd was successfully created.' }
         format.json { render json: @gadd, status: :created, location: @gadd }
       else
         format.html { render action: "new" }

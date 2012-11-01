@@ -39,7 +39,7 @@ class @Gmaps4Rails
       center_latitude: 0
       center_longitude: 0
       zoom: 7
-      maxZoom: null
+      maxZoom: 7
       minZoom: null
       auto_adjust : true      # adjust the map to the markers if set to true
       auto_zoom: true         # zoom given by auto-adjust
@@ -223,7 +223,7 @@ class @Gmaps4Rails
         fillColor     = point.fillColor     || @polygons_conf.fillColor
         fillOpacity   = point.fillOpacity   || @polygons_conf.fillOpacity
         clickable     = point.clickable     || @polygons_conf.clickable
-        
+
     #Construct the polygon
     new_poly = new google.maps.Polygon
       paths:          polygon_coordinates
@@ -238,7 +238,7 @@ class @Gmaps4Rails
     #save polygon in list
     polygon.serviceObject = new_poly
 
-  
+
 
   #////////////////////////////////////////////////////
   #///////////////////// MARKERS //////////////////////
