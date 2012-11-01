@@ -1,3 +1,7 @@
+#map label { width: auto; display:inline; }
+#map img { max-width: none; }
+
+
 .map_container {
   padding: 6px;
   border-width: 1px;
