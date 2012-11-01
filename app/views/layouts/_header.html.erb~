@@ -3,7 +3,7 @@
   <div class="navbar-inner">
     <div class="container">
 
-      <div class="nav pull-left"
+      <div class="nav pull-left">
 
          <%= form_tag(gadds_path, :method => "get") do %>
 			  <%= text_field_tag(:search, params[:search]) %>
@@ -13,9 +13,9 @@
 
       <nav>
         <ul class="nav pull-right">
-          <li><%= link_to "Home",    '#' %></li>
-          <li><%= link_to "Help",    '#' %></li>
-          <li><%= link_to "Sign in", '#' %></li>
+          <li><%= link_to "Home",    home_path %></li>
+          <li><%= link_to "Help",    help_path %></li>
+          <li><%= link_to "Sign in", '/users/new' %></li>
         </ul>
       </nav>
     </div>

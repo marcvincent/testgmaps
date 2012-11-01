@@ -12,12 +12,7 @@
 
 <%= link_to 'New Gadd', new_gadd_path %>
 
-<br />
-<br />
 
-<%= check_box_tag(:showGaddTable) %>
-<br />
-<br />
 <br />
 <table>
   <tr>
@@ -30,7 +25,7 @@
     <th></th>
     <th></th>
   </tr>
-<% if :showGaddTable %>
+
 	<% @gadds.each do |gadd| %>
 	  <tr>
 		 <td><%= gadd.name %></td>
@@ -43,4 +38,3 @@
 	  </tr>
 	  <% end %>
 	</table>
-<% end %>
