@@ -1,0 +1,45 @@
+
+
+<header class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+     <% if signed_in? %>
+
+			<div class="nav pull-left">
+         <%= form_tag gadds_path, :class => "form-inline",:method => "get" do %>
+			  <%= text_field_tag :search, params[:search],:class=> "input-small",
+			  						:style=> 'width: 400px' %>
+
+
+			  <%= submit_tag("Filter", :name => nil,:class=> "input-small"	) %>
+			</div>
+
+			<% end %>
+
+     <% end %>
+        <ul class="nav pull-right">
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Help", help_path %></li>
+          <% if signed_in? %>
+            <li><%= link_to "Users", '#' %></li>
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Account <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+
+                <li><%= link_to "Settings", '#' %></li>
+                <li class="divider"></li>
+                <li>
+                  <%= link_to "Sign out", signout_path, method: "delete" %>
+                </li>
+              </ul>
+            </li>
+          <% else %>
+            <li><%= link_to "Sign in", signin_path %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
