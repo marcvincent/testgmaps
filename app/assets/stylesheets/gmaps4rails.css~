@@ -1,8 +1,10 @@
-#mapCanvas label { width: auto; display:inline; }
-#mapCanvas img { max-width: none; }
+#map label { width: auto; display:inline; }
+#map img { max-width: none; }
 
 
 .map_container {
+margin-left:auto;
+margin-right:auto;
   padding: 6px;
   border-width: 1px;
   border-style: solid;
@@ -10,11 +12,11 @@
   -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
   -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
   box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
-  width: 800px;
+  width: 90%;
 }
 
 .gmaps4rails_map {
-  width: 800px;
+  width: 100%;
   height: 400px;
 }
 

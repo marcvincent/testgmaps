@@ -10,6 +10,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  gmaps_zoom :float
+#  privacy    :string(255)
 #
 
 	class Gadd < ActiveRecord::Base
@@ -22,6 +23,7 @@
 
 		validates :latitude, presence: true
 		validates :longitude, presence: true
+		validates :privacy, presence: true
 
 	  acts_as_gmappable :latitude => 'lat', :longitude => 'lng'
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121101203746) do
+ActiveRecord::Schema.define(:version => 20121102231607) do
 
   create_table "gadds", :force => true do |t|
     t.string   "name"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20121101203746) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.float    "gmaps_zoom"
+    t.string   "privacy"
   end
 
   add_index "gadds", ["name"], :name => "index_gadds_on_name", :unique => true

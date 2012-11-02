@@ -1,6 +1,7 @@
 Testgmaps::Application.routes.draw do
 
-	root :to => "gadds#index"
+	 root to: 'gadds#index'
+
 
 
   resources :gadds

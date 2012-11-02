@@ -89,7 +89,7 @@ input, textarea, select, .uneditable-input {
   float: left;
   width: 100%;
   margin-top: 45px;
-  @include box_sizing;
+  /*@include box_sizing;
 }
 
 
@@ -227,15 +227,4 @@ aside {
 .gravatar {
   float: left;
   margin-right: 10px;
-}
-
-
-/* miscellaneous */
-
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
 }

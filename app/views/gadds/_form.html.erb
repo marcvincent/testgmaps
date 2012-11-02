@@ -11,25 +11,33 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :latitude %><br />
-    <%= f.text_field :latitude %>
-  </div>
-  <div class="field">
-    <%= f.label :longitude %><br />
-    <%= f.text_field :longitude %>
-  </div>
 
-  <div class="field">
-    <%= f.label :gmaps_zoom %><br />
-    <%= f.text_field :gmaps_zoom %>
-  </div>
+<br />
+
+  <table>
+  <tr>
+    <th><%= f.label :name %></th>
+    <th><%= f.label :latitude %></th>
+    <th><%= f.label :longitude %></th>
+    <th><%= f.label :gmaps_zoom %></th>
+  </tr>
+
+  <tr>
+    <th><%= f.text_field :name %></th>
+    <th><%= f.text_field :latitude %></th>
+    <th><%= f.text_field :longitude %></th>
+    <th><%= f.text_field :gmaps_zoom %></th>
+  </tr>
+
+	</table>
+
+
+
+	<br/>
 
   <div class="actions">
     <%= f.submit %>
   </div>
+
+
 <% end %>

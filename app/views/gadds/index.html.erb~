@@ -6,11 +6,8 @@
 <%= render 'gmaps4rails_new' %>
 
 
-<br />
 
 <%= render 'form' %>
-
-<%= link_to 'New Gadd', new_gadd_path %>
 
 
 <br />
