@@ -1,0 +1,20 @@
+#  latitude   :float
+#  longitude  :float
+#  gmaps      :boolean
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  gmaps_zoom :float
+#  privacy    :string(255)
+#
+
+<ul class="users">
+  <% @gadds.each do |gadd| %>
+    <li>
+      <%= link_to gadd.name, gadd %>
+      <%= gadd.latitude %>
+      <%= gadd.longitude %>
+      <%= gadd.privacy %>
+      <%= gadd.created_at %>
+    </li>
+  <% end %>
+</ul>

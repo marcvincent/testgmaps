@@ -76,6 +76,7 @@ input, textarea, select, .uneditable-input {
 }
 
 .field_with_errors {
+
   @extend .control-group;
   @extend .error;
  }
@@ -89,7 +90,7 @@ input, textarea, select, .uneditable-input {
   float: left;
   width: 100%;
   margin-top: 45px;
-  /*@include box_sizing;
+  /*@include box_sizing;*/
 }
 
 

@@ -13,52 +13,57 @@
 #  privacy    :string(255)
 #
 
-	class Gadd < ActiveRecord::Base
-	  attr_accessible :latitude, :longitude, :name, :gmaps_zoom
+class Gadd < ActiveRecord::Base
+	attr_accessible :latitude, :longitude, :name, :gmaps_zoom, :privacy
 
-		#belongs_to :user
 
-	  validates :name, :length => {:maximum => 140},
-	  					uniqueness: { case_sensitive: false }
+	PRIVACY_SETTINGS = ['Public', 'Intimate', 'Secret']
 
-		validates :latitude, presence: true
-		validates :longitude, presence: true
+	#belongs_to :user
 
-	  acts_as_gmappable :latitude => 'lat', :longitude => 'lng'
+	validates :name, :length => {:maximum => 140},
+		uniqueness: { case_sensitive: false },
+		presence: true
 
-		def gmaps4rails_address
-		#describe how to retrieve the address from your model, if you use directly a db column, you can dry your code, see wiki
+	validates :latitude, presence: true
+	validates :longitude, presence: true
+	validates :privacy, presence: true
 
-		end
+	acts_as_gmappable :latitude => 'lat', :longitude => 'lng'
 
-		def gmaps4rails_infowindow
-      "<h1>#{name}</h1>"
-    	end
+	def gmaps4rails_address
+	#describe how to retrieve the address from your model, if you use directly a db column, you can dry your code, see wiki
 
-    	def gmaps4rails_marker_picture
- 		{
-		  "picture" => "/images/gmap_marker.png",          # string,  mandatory
-			"width" => "20" ,          # integer, mandatory
-			"height" => "34",          # integer, mandatory
+	end
 
-				                   # See doc here: http://google-maps-utility-library-v3.googlecode.com/svn/trunk/richmarker/docs/reference.html
-		 }
-		end
+	def gmaps4rails_infowindow
+		"<h1>#{name}</h1>"
+	end
+
+	def gmaps4rails_marker_picture
+	{
+		"picture" => "/images/gmap_marker.png",          # string,  mandatory
+		"width" => "20" ,          # integer, mandatory
+		"height" => "34",          # integer, mandatory
+
+		# See doc here: http://google-maps-utility-library-v3.googlecode.com/svn/trunk/richmarker/docs/reference.html
+	}
+	end
 
 
 
 
 
 	def self.search(search)
-	  if search
-		 find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
-	  else
-		 find(:all)
-	  end
+		if search and signed_in
+			find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+		else
+			find(:all)
+		end
 	end
 
 
 
 
 
-	end
+end

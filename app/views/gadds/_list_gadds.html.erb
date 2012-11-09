@@ -1,0 +1,13 @@
+
+
+<ul class="users">
+  <% @gadds.each do |gadd| %>
+    <li>
+      <%= link_to gadd.name, gadd %>
+      <%= gadd.latitude %>
+      <%= gadd.longitude %>
+      <%= gadd.privacy %>
+      <%= gadd.created_at %>
+    </li>
+  <% end %>
+</ul>

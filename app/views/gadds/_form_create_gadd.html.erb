@@ -1,8 +1,8 @@
 <%= simple_form_for(@gadd) do |f| %>
 	<%= f.input :name %>
-	<%= f.input :latitude %>
-	<%= f.input :longitude %>
-	<%= f.input :gmaps_zoom %>
+	<%= f.input :latitude, :as => :hidden %>
+	<%= f.input :longitude, :as => :hidden %>
+	<%= f.input :gmaps_zoom, :as => :hidden %>
 	<%= f.input :privacy, collection: ['Public', 'Friends', 'Secret'], as: :radio_buttons  %>
 	<%= f.button :submit %>
 

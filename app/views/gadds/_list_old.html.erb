@@ -1,0 +1,23 @@
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>User</th>
+    <th>Gmaps zoom</th>
+	 <th>Privacy</th>
+
+  </tr>
+
+	<% @gadds.each do |gadd| %>
+	  <tr>
+		 <td><%= gadd.name %></td>
+		 <td><%= gadd.latitude %></td>
+		 <td><%= gadd.longitude %></td>
+		  <td><%= gadd.gmaps_zoom %></td>
+		<td><%= gadd.privacy %></td>
+		 <td><%= link_to 'Destroy', gadd, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	  </tr>
+	  <% end %>
+	</table>

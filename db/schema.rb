@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121102231607) do
+ActiveRecord::Schema.define(:version => 20121109212205) do
 
   create_table "gadds", :force => true do |t|
     t.string   "name"
@@ -25,6 +25,12 @@ ActiveRecord::Schema.define(:version => 20121102231607) do
   end
 
   add_index "gadds", ["name"], :name => "index_gadds_on_name", :unique => true
+
+  create_table "privacies", :force => true do |t|
+    t.string   "type"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"
